@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.getElementById('card-container');
     const backButton = document.getElementById('back-button');
 
-    // Extract card name from query parameter
     const urlParams = new URLSearchParams(window.location.search);
     const cardDescription = urlParams.get('card');
 
@@ -12,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function loadCardDetails() {
-        // Search for the file name based on card description
-        const cardFiles = ['økologi.json', 'anotherCard.json']; // Ensure these match your actual filenames
+        const cardFiles = ['økologi.json', 'anotherCard.json'];
         for (const file of cardFiles) {
             try {
                 const response = await fetch(`../cards/${file}`);
-                if (!response.ok) continue; // Skip files that don't match
+                if (!response.ok) continue;
                 const cardData = await response.json();
                 if (cardData.DESCRIPTION === cardDescription) {
+                    console.log('Loaded card details:', cardData); // Log card data for debugging
                     createCard(cardData);
                     return;
                 }
@@ -31,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createCard(data) {
+        if (!data.DESCRIPTION || !data.WORDS || !data.EXPLANATIONS || !data.PUBLISHER) {
+            console.error('Card data is missing required fields:', data);
+            return;
+        }
+
         const card = document.createElement('div');
         card.className = 'card';
 
@@ -62,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cardContainer.appendChild(card);
     }
 
-    // Back button functionality
     backButton.addEventListener('click', () => {
         window.history.back();
     });
