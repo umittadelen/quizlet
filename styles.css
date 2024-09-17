@@ -1,60 +1,66 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
 }
 
 header {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px;
+    padding: 1rem;
+    background-color: #f5f5f5;
     text-align: center;
 }
 
-input#search {
+#search {
     width: 80%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 1rem auto;
 }
 
 .card {
     width: 200px;
-    height: 200px;
-    margin: 10px;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-    cursor: pointer;
+    height: 300px;
+    perspective: 1000px;
+    margin: 1rem;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.card.flipped {
-    transform: rotateY(180deg);
-}
-
-.card .front,
-.card .back {
-    position: absolute;
+.card .front, .card .back {
     width: 100%;
     height: 100%;
+    position: absolute;
     backface-visibility: hidden;
+    transition: transform 0.6s;
 }
 
 .card .front {
-    background-color: #fff;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
 }
 
 .card .back {
-    background-color: #007BFF;
-    color: #fff;
+    background: #f5f5f5;
     transform: rotateY(180deg);
-    padding: 10px;
+    padding: 1rem;
+}
+
+.card.flipped .front {
+    transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.search-result a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-result a:hover {
+    background-color: #f5f5f5;
 }
