@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load cards from JSON files
     async function loadCards() {
-        const cardFiles = ['cards/card1.json', 'cards/card2.json'];
+        const cardFiles = ['cards/økonomi.json'];
         for (const file of cardFiles) {
             try {
                 const response = await fetch(file);
