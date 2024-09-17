@@ -1,0 +1,18 @@
+{
+    "DESCRIPTION": "Økologi: Naturfag",
+    "WORDS": [
+        "Biodiversitet",
+        "Økosystem",
+        "Næringskjede",
+        "Biomasse",
+        "Energi"
+    ],
+    "EXPLANATIONS": [
+        "Biodiversitet refererer til mangfoldet av livsformer i et økosystem.",
+        "Et økosystem er et system av biotiske og abiotiske faktorer som samhandler.",
+        "Næringskjede beskriver overføringen av energi fra produsenter til konsumenter.",
+        "Biomasse er den totale vekten av organismer i et område.",
+        "Energi i et økosystem overføres fra en organisme til en annen gjennom næringskjeder."
+    ],
+    "PUBLISHER": "Naturfagsforlaget"
+}
