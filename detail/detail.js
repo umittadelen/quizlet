@@ -2,33 +2,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.getElementById('card-container');
     const backButton = document.getElementById('back-button');
 
-    // Get card data from query parameter
+    // Extract card name from query parameter
     const urlParams = new URLSearchParams(window.location.search);
-    const cardName = urlParams.get('card');
+    const cardDescription = urlParams.get('card');
+
+    if (!cardDescription) {
+        console.error('No card specified in query parameters');
+        return;
+    }
 
     async function loadCardDetails() {
-        const response = await fetch(`../cards/${cardName}.json`);
-        if (!response.ok) {
-            console.error(`Failed to load card details for ${cardName}`);
-            return;
+        // Search for the file name based on card description
+        const cardFiles = ['økologi.json', 'anotherCard.json']; // Ensure these match your actual filenames
+        for (const file of cardFiles) {
+            try {
+                const response = await fetch(`../cards/${file}`);
+                if (!response.ok) continue; // Skip files that don't match
+                const cardData = await response.json();
+                if (cardData.DESCRIPTION === cardDescription) {
+                    createCard(cardData);
+                    return;
+                }
+            } catch (error) {
+                console.error(`Failed to load card details for ${cardDescription}:`, error);
+            }
         }
-        const cardData = await response.json();
-        createCard(cardData);
+        console.error(`Card ${cardDescription} not found`);
     }
 
     function createCard(data) {
         const card = document.createElement('div');
         card.className = 'card';
-        card.innerHTML = `
-            <div class="front">${data.DESCRIPTION}</div>
-            <div class="back">
-                <h3>${data.PUBLISHER}</h3>
-                <h4>Words:</h4>
-                <ul>${data.WORDS.map(word => `<li>${word}</li>`).join('')}</ul>
-                <h4>Explanations:</h4>
-                <ul>${data.EXPLANATIONS.map(exp => `<li>${exp}</li>`).join('')}</ul>
-            </div>
+
+        const cardInner = document.createElement('div');
+        cardInner.className = 'card-inner';
+
+        const cardFront = document.createElement('div');
+        cardFront.className = 'card-face front';
+        cardFront.innerHTML = `${data.DESCRIPTION}`;
+
+        const cardBack = document.createElement('div');
+        cardBack.className = 'card-face back';
+        cardBack.innerHTML = `
+            <h3>${data.PUBLISHER}</h3>
+            <h4>Words:</h4>
+            <ul>${data.WORDS.map(word => `<li>${word}</li>`).join('')}</ul>
+            <h4>Explanations:</h4>
+            <ul>${data.EXPLANATIONS.map(exp => `<li>${exp}</li>`).join('')}</ul>
         `;
+
+        cardInner.appendChild(cardFront);
+        cardInner.appendChild(cardBack);
+        card.appendChild(cardInner);
 
         card.addEventListener('click', () => {
             card.classList.toggle('flipped');

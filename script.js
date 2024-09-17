@@ -2,12 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardContainer = document.getElementById('card-container');
     const searchInput = document.getElementById('search');
 
-    // Load cards from JSON files
+    // List of card files
+    const cardFiles = ['økologi.json', 'anotherCard.json']; // Add your card filenames here
+
     async function loadCards() {
-        const cardFiles = ['cards/økonomi.json']; // Update with your actual file names
         for (const file of cardFiles) {
             try {
-                const response = await fetch(file);
+                const response = await fetch(`cards/${file}`);
                 if (!response.ok) throw new Error(`Network response was not ok ${response.statusText}`);
                 const cardData = await response.json();
                 createSearchResult(cardData);
