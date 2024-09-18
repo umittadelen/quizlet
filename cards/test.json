@@ -1,5 +1,5 @@
 {
-    "DESCRIPTION": "Økologi: Naturfag",
+    "NAME": "test",
     "WORDS": [
         "Biodiversitet",
         "Økosystem",
@@ -14,5 +14,5 @@
         "Biomasse er den totale vekten av organismer i et område.",
         "Energi i et økosystem overføres fra en organisme til en annen gjennom næringskjeder."
     ],
-    "PUBLISHER": "Naturfagsforlaget"
+    "PUBLISHER": "umittadelen"
 }
