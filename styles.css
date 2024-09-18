@@ -2,7 +2,7 @@
     --body-bg-color: #121212;
     --body-text-color: #ffc0cb;
 
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Quicksand', 'Arial', sans-serif;
 
     --search-bar-bg-color: #2b2b2b;
     --search-bar-text-color: #fff;
@@ -41,6 +41,7 @@ body {
 
 /* Search bar styling */
 #search {
+    font-family: var(--font-family);
     width: 80%;
     max-width: 500px;
     padding: 10px;
