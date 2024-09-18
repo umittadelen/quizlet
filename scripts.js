@@ -44,8 +44,8 @@ async function loadCards() {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-            <div class="front">${word}</div>
-            <div class="back">${deck.EXPLANATIONS[index]}</div>
+            <div class="front"><p class="text">${word}</p></div>
+            <div class="back"><p class="text">${deck.EXPLANATIONS[index]}</p></div>
         `;
         card.onclick = () => card.classList.toggle('flipped');
         container.appendChild(card);
