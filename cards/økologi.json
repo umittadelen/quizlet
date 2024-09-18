@@ -1,18 +1,32 @@
 {
     "NAME": "økologi",
     "WORDS": [
-        "Biodiversitet",
         "Økosystem",
-        "Næringskjede",
-        "Biomasse",
-        "Energi"
+        "Biotiske faktorer",
+        "Abiotiske faktorer",
+        "Individ",
+        "Populasjon",
+        "Samfunn",
+        "Produsenter",
+        "Forbruker",
+        "Nedbryter",
+        "Evolusjon",
+        "Naturlig utvalg",
+        "Biologisk mangfold"
     ],
     "EXPLANATIONS": [
-        "Biodiversitet refererer til mangfoldet av livsformer i et økosystem.",
-        "Et økosystem er et system av biotiske og abiotiske faktorer som samhandler.",
-        "Næringskjede beskriver overføringen av energi fra produsenter til konsumenter.",
-        "Biomasse er den totale vekten av organismer i et område.",
-        "Energi i et økosystem overføres fra en organisme til en annen gjennom næringskjeder."
+        "Et avgrenset område i naturen",
+        "Levende faktorer",
+        "Ikke-levende faktorer",
+        "En enkelt organisme",
+        "En gruppe individer av samme art som lever innenfor et avgrenset område.",
+        "Alle populasjoner av planter og dyr som normalt lever sammen i et område",
+        "Planter og alger som ved hjelp av fotosyntesen kan lage druesukker",
+        "Dyr som spiser levende planter og dyr",
+        "Omdanner døde planter og dyr til jord med næring",
+        "Egenskapene til en art kan forandre seg over mange generasjoner",
+        "Individene med best gener overleve til å få barn og føre egenskapene sine videre",
+        "Stor variasjon i naturtype, arter og gener"
     ],
     "PUBLISHER": "umittadelen"
 }
