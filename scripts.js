@@ -12,20 +12,13 @@ async function filterDecks() {
     const deckList = document.getElementById('deckList');
     deckList.innerHTML = ''; // Clear old results
 
-    if (query === '') return; // Do not display anything if input is empty
-
     const allDecks = await loadDecks();
-    let resultCount = 0;
-
     allDecks.forEach((deck, index) => {
         if (deck.NAME.toLowerCase().includes(query) || deck.PUBLISHER.toLowerCase().includes(query)) {
-            if (resultCount >= 15) return; // Stop if we reach the maximum number of results
-
             const li = document.createElement('li');
             li.textContent = `${deck.NAME} by ${deck.PUBLISHER}`;
             li.onclick = () => openDeck(index);
             deckList.appendChild(li);
-            resultCount++;
         }
     });
 }
@@ -60,6 +53,3 @@ async function loadCards() {
 }
 
 window.onload = loadCards;
-
-// Attach search filter function to input field
-document.getElementById('search').addEventListener('input', filterDecks);
