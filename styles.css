@@ -1,26 +1,5 @@
 :root{
-    --body-bg-color: #121212;
-    --body-text-color: #ffc0cb;
-
     --font-family: 'Quicksand', 'Arial', sans-serif;
-
-    --search-bar-bg-color: #2b2b2b;
-    --search-bar-text-color: #fff;
-    --search-bar-border: 2px solid #444;
-    --search-element-hover-color: #444;
-
-    --card-scrollbar-bg-color: #444;
-    --card-scrollbar-thumb-color: var(--body-text-color);
-    --card-text-color: #ffc0cb;
-
-    --card-front-border: 2px solid #444;
-    --card-front-bg-color: #333;
-    --card-front-text-color: #fff;
-
-    --card-back-border: 2px solid #444;
-    --card-back-bg-color: #333;
-    --card-back-text-color: #fff;
-
     --card-size: 300px;
 }
 
@@ -37,6 +16,7 @@ body {
     margin: 0;
     user-select: none;
     height: 100%;
+    transition: all 0.3s ease;
 }
 
 /* Search bar styling */
@@ -52,6 +32,19 @@ body {
     background-color: var(--search-bar-bg-color);
     color: var(--search-bar-text-color);
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+#search::placeholder {
+    color: var(--search-bar-text-color);
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    background-color: var(--search-bar-hover-color);
+    border: var(--search-bar-focus-border);
+    outline: none;
+    transition: all 0.3s ease;
 }
 
 /* Search results styling */
@@ -61,20 +54,23 @@ body {
     margin: 0 0 30px;
     width: 80%;
     max-width: 500px;
+    transition: all 0.3s ease;
 }
 
 #deckList li {
-    background-color: var(--search-bar-bg-color);
-    border: var(--search-bar-border);
+    background-color: var(--search-element-bg-color);
+    border: var(--search-element-border);
     padding: 10px 15px;
     border-radius: 8px;
     margin-bottom: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #deckList li:hover {
     background-color: var(--search-element-hover-color);
+    border: var(--search-element-hover-border);
+    transition: all 0.3s ease;
 }
 
 /* Center the cards container */
@@ -87,6 +83,7 @@ body {
     margin: auto;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 /* Card styling */
@@ -108,19 +105,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 8px #fff4;
     transition: transform 0.6s ease-in-out;
     overflow: auto;
 }
 
 .card ::-webkit-scrollbar {
-    background-image: linear-gradient(to right, #0000, var(--card-scrollbar-bg-color));
-    width: 15px;
+    width: var(--card-scrollbar-widt);
     border-radius: 0px 8px 8px 0px;
 }
 
-.card ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(to right, #0000, var(--card-scrollbar-thumb-color));
+.card .front ::-webkit-scrollbar {
+    background-image: linear-gradient(to right, var(--card-front-bg-color), var(--card-front-border-color));
+}
+
+.card .back ::-webkit-scrollbar {
+    background-image: linear-gradient(to right, var(--card-back-bg-color), var(--card-back-border-color));
+}
+
+.card .front ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, var(--card-front-bg-color), var(--card-front-scrollbar-thumb-color));
+    border-radius: 0px 8px 8px 0px;
+}
+
+.card .back ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, var(--card-back-bg-color), var(--card-back-scrollbar-thumb-color));
     border-radius: 0px 8px 8px 0px;
 }
 

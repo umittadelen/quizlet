@@ -93,3 +93,71 @@
         --font-size: 20px;
     }
 }
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --body-bg-color: #f2ffe1;
+        --body-text-color: #c61c8d;
+
+        --search-bar-bg-color: #e4ffc0;
+        --search-bar-text-color: #c61c8d;
+        --search-bar-focus-border: 4px solid #e4ffc0;
+        --search-bar-border: 4px solid #cdf499;
+        --search-bar-hover-color: #cdf499;
+
+        --search-element-border: 4px solid #cdf499;
+        --search-element-hover-border: 4px solid #e4ffc0;
+        --search-element-bg-color: #e4ffc0;
+        --search-element-hover-color: #cdf499;
+
+        --card-scrollbar-width: 20px;
+        --card-text-color: #c61c8d;
+
+        --card-front-border-color: #aed77a;
+        --card-front-border: 4px solid var(--card-front-border-color);
+        --card-front-scrollbar-thumb-color: var(--body-text-color);
+        --card-front-bg-color: #cdf499;
+        --card-front-text-color: var(--card-text-color);
+
+        --card-back-border-color: #aed77a;
+        --card-back-border: 4px solid var(--card-back-border-color);
+        --card-back-scrollbar-thumb-color: var(--body-text-color);
+        --card-back-bg-color: #cdf499;
+        --card-back-text-color: var(--card-text-color);
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg-color: #121212;
+        --body-text-color: #ffc0cb;
+
+        --search-bar-bg-color: #2b2b2b;
+        --search-bar-text-color: #fff;
+        --search-bar-focus-border: 4px solid #e4ffc0;
+        --search-bar-border: 2px solid #444;
+        --search-bar-hover-color: 444;
+
+        --search-element-border: 4px solid #cdf499;
+        --search-element-hover-border: 4px solid #e4ffc0;
+        --search-element-bg-color: #e4ffc0;
+        --search-element-hover-color: #cdf499;
+
+        --card-scrollbar-width: 20px;
+        --card-text-color: #ffc0cb;
+
+        --card-front-border-color: #444;
+        --card-front-border: 4px solid var(--card-front-border-color);
+        --card-front-scrollbar-thumb-color: var(--body-text-color);
+        --card-front-bg-color: #333;
+        --card-front-text-color: var(--card-text-color);
+
+        --card-back-border-color: #444;
+        --card-back-border: 4px solid var(--card-back-border-color);
+        --card-back-scrollbar-thumb-color: var(--body-text-color);
+        --card-back-bg-color: #333;
+        --card-back-text-color: var(--card-text-color);
+    }
+}
