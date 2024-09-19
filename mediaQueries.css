@@ -1,95 +1,95 @@
 /* iPhone 6, 7, 8, SE (1st gen) */
 @media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
-    body {
-        font-weight: 400; /* Medium font weight for iPhone 6/7/8 */
-        font-size: 16px;  /* Slightly smaller font size */
+    :root {
+        --font-weight: 400;
+        --font-size: 20px;  /* Larger font size for easier reading */
     }
 }
 
 /* iPhone X, XS, 11 Pro */
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    body {
-        font-weight: 400;
-        font-size: 16px;
+    :root {
+        --font-weight: 400;
+        --font-size: 20px;
     }
 }
 
 /* iPhone 12, 13, 14, 15 */
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-    body {
-        font-weight: 400;
-        font-size: 16px;
+    :root {
+        --font-weight: 400;
+        --font-size: 20px;
     }
 }
 
 /* Android devices */
 @media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-        font-weight: 400; /* Medium font weight for Android */
-        font-size: 16px;  /* Slightly smaller font size */
+    :root {
+        --font-weight: 400;
+        --font-size: 20px;  /* Larger font size for easier reading */
     }
 }
 
 /* Tablets (Portrait) */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-    body {
-        font-weight: 500; /* Medium font weight for tablets */
-        font-size: 16px;  /* Adjusted font size for tablets */
+    :root {
+        --font-weight: 500;
+        --font-size: 20px;  /* Adjusted for readability */
     }
 }
 
 /* Tablets (Landscape) */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-    body {
-        font-weight: 500;
-        font-size: 18px;
+    :root {
+        --font-weight: 500;
+        --font-size: 20px;  /* Slightly larger for landscape */
     }
 }
 
 /* Small screens (mobile devices, portrait) */
 @media only screen and (max-width: 480px) and (orientation: portrait) {
-    body {
-        font-weight: 300; /* Lightest font weight for small screens */
-        font-size: 14px;  /* Smaller font size for small screens */
+    :root {
+        --font-weight: 300;
+        --font-size: 24px;  /* Increase for small screens */
     }
 }
 
 /* Small screens (mobile devices, landscape) */
 @media only screen and (max-width: 768px) and (orientation: landscape) {
-    body {
-        font-weight: 300;
-        font-size: 14px;
+    :root {
+        --font-weight: 300;
+        --font-size: 20px;
     }
 }
 
 /* PC (Small screens, landscape) */
 @media only screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
-    body {
-        font-weight: 500; /* Medium font weight for small PC screens */
-        font-size: 16px;  /* Adjusted font size for small PC screens */
+    :root {
+        --font-weight: 500;
+        --font-size: 24px;
     }
 }
 
 /* PC (Standard screens) */
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-    body {
-        font-weight: 500; /* Medium font weight for standard PC screens */
-        font-size: 18px;  /* Standard font size */
+    :root {
+        --font-weight: 500;
+        --font-size: 24px;
     }
 }
 
 /* PC (Wide screens) */
 @media only screen and (min-width: 1440px) {
-    body {
-        font-weight: 700; /* Heaviest font weight for wide screens */
-        font-size: 20px;  /* Larger font size for wide screens */
+    :root {
+        --font-weight: 700;
+        --font-size: 20px;
     }
 }
 
 /* Large screens (desktops, large tablets) */
 @media only screen and (min-width: 1200px) {
-    body {
-        font-weight: 700; /* Heaviest font weight for large screens */
-        font-size: 20px;  /* Larger font size for better readability */
+    :root {
+        --font-weight: 700;
+        --font-size: 20px;
     }
 }
