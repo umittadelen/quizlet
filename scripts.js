@@ -56,8 +56,6 @@ async function loadCards() {
     const allDecks = await loadDecks(); // Fetch all decks
     const deck = allDecks[deckIndex]; // Get the selected deck
 
-    console.log(deck);
-
     const container = document.getElementById('cardsContainer');
     container.innerHTML = ''; // Clear old cards
 
@@ -72,6 +70,37 @@ async function loadCards() {
         card.onclick = () => card.classList.toggle('flipped'); // Flip card on click
         container.appendChild(card); // Add card to container
     });
+
+    if (deck.THEME) {
+        document.querySelector(':root').style.setProperty('--body-bg-color', deck.THEME.body_bg_color, 'important');
+        document.querySelector(':root').style.setProperty('--body-text-color', deck.THEME.body_text_color, 'important');
+
+        document.querySelector(':root').style.setProperty('--search-bar-bg-color', deck.THEME.search_bar_bg_color, 'important');
+        document.querySelector(':root').style.setProperty('--search-bar-text-color', deck.THEME.search_bar_text_color, 'important');
+        document.querySelector(':root').style.setProperty('--search-bar-focus-border', deck.THEME.search_bar_focus_border, 'important');
+        document.querySelector(':root').style.setProperty('--search-bar-border', deck.THEME.search_bar_border, 'important');
+        document.querySelector(':root').style.setProperty('--search-bar-hover-color', deck.THEME.search_bar_hover_color, 'important');
+
+        document.querySelector(':root').style.setProperty('--search-element-border', deck.THEME.search_element_border, 'important');
+        document.querySelector(':root').style.setProperty('--search-element-hover-border', deck.THEME.search_element_hover_border, 'important');
+        document.querySelector(':root').style.setProperty('--search-element-bg-color', deck.THEME.search_element_bg_color, 'important');
+        document.querySelector(':root').style.setProperty('--search-element-hover-color', deck.THEME.search_element_hover_color, 'important');
+
+        document.querySelector(':root').style.setProperty('--card-scrollbar-width', deck.THEME.card_scrollbar_width, 'important');
+        document.querySelector(':root').style.setProperty('--card-text-color', deck.THEME.card_text_color, 'important');
+
+        document.querySelector(':root').style.setProperty('--card-front-border-color', deck.THEME.card_front_border_color, 'important');
+        document.querySelector(':root').style.setProperty('--card-front-border', deck.THEME.card_front_border, 'important');
+        document.querySelector(':root').style.setProperty('--card-front-scrollbar-thumb-color', deck.THEME.card_front_scrollbar_thumb_color, 'important');
+        document.querySelector(':root').style.setProperty('--card-front-bg-color', deck.THEME.card_front_bg_color, 'important');
+        document.querySelector(':root').style.setProperty('--card-front-text-color', deck.THEME.card_front_text_color, 'important');
+
+        document.querySelector(':root').style.setProperty('--card-back-border-color', deck.THEME.card_back_border_color, 'important');
+        document.querySelector(':root').style.setProperty('--card-back-border', deck.THEME.card_back_border, 'important');
+        document.querySelector(':root').style.setProperty('--card-back-scrollbar-thumb-color', deck.THEME.card_back_scrollbar_thumb_color, 'important');
+        document.querySelector(':root').style.setProperty('--card-back-bg-color', deck.THEME.card_back_bg_color, 'important');
+        document.querySelector(':root').style.setProperty('--card-back-text-color', deck.THEME.card_back_text_color, 'important');
+    }
 }
 
 // Event listener for copying URL with selected deck name

@@ -29,34 +29,34 @@
         "aaa"
     ],
     "THEME":{
-        "--body-bg-color": "#f2ffe1",
-        "--body-text-color": "#c61c8d",
+        "body_bg_color": "#ffeaf7",
+        "body_text_color": "#8c52ff",
 
-        "--search-bar-bg-color": "#e4ffc0",
-        "--search-bar-text-color": "#c61c8d",
-        "--search-bar-focus-border": "4px solid #e4ffc0",
-        "--search-bar-border": "4px solid #cdf499",
-        "--search-bar-hover-color": "#cdf499",
+        "search_bar_bg_color": "#ffccf2",
+        "search_bar_text_color": "#8c52ff",
+        "search_bar_focus_border": "4px solid #ffb3e6",
+        "search_bar_border": "4px solid #e6a8ff",
+        "search_bar_hover_color": "#ffb3e6",
 
-        "--search-element-border": "4px solid #cdf499",
-        "--search-element-hover-border": "4px solid #e4ffc0",
-        "--search-element-bg-color": "#e4ffc0",
-        "--search-element-hover-color": "#cdf499",
+        "search_element_border": "4px solid #e6a8ff",
+        "search_element_hover_border": "4px solid #ffb3e6",
+        "search_element_bg_color": "#ffccf2",
+        "search_element_hover_color": "#ffb3e6",
 
-        "--card-scrollbar-width": "20px",
-        "--card-text-color": "#c61c8d",
+        "card_scrollbar_width": "20px",
+        "card_text_color": "#8c52ff",
 
-        "--card-front-border-color": "#aed77a",
-        "--card-front-border": "4px solid var(--card-front-border-color)",
-        "--card-front-scrollbar-thumb-color": "var(--body-text-color)",
-        "--card-front-bg-color": "#cdf499",
-        "--card-front-text-color": "var(--card-text-color)",
+        "card_front_border_color": "#ff99ff",
+        "card_front_border": "4px solid var(card_front_border_color)",
+        "card_front_scrollbar_thumb_color": "var(body_text_color)",
+        "card_front_bg_color": "#ffc2f0",
+        "card_front_text_color": "var(card_text_color)",
 
-        "--card-back-border-color": "#aed77a",
-        "--card-back-border": "4px solid var(--card-back-border-color)",
-        "--card-back-scrollbar-thumb-color": "var(--body-text-color)",
-        "--card-back-bg-color": "#cdf499",
-        "--card-back-text-color": "var(--card-text-color)"
+        "card_back_border_color": "#ff99ff",
+        "card_back_border": "4px solid var(card_back_border_color)",
+        "card_back_scrollbar_thumb_color": "var(body_text_color)",
+        "card_back_bg_color": "#ffc2f0",
+        "card_back_text_color": "var(card_text_color)"
     },
     "PUBLISHER": "umittadelen"
 }
