@@ -6,6 +6,8 @@
 /* General styling for dark theme */
 body {
     background-color: var(--body-bg-color);
+    background-image: var(--body-bg-image);
+    background-attachment: var(--body-bg-attachment);
     color: var(--body-text-color);
     font-family: var(--font-family);
     display: flex;

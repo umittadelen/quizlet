@@ -1,5 +1,5 @@
 // List of deck names, each corresponding to a JSON file with cards
-const deck_names = ['økologi', 'test', 'theme'];
+const deck_names = ['økologi', 'test', 'theme', 'backgroundimg'];
 
 // Generate the paths to each deck's JSON file
 const decks = deck_names.map((item) => `./cards/${item}.json`);
@@ -74,6 +74,8 @@ async function loadCards() {
     if (deck.THEME) {
         document.querySelector(':root').style.setProperty('--body-bg-color', deck.THEME.body_bg_color, 'important');
         document.querySelector(':root').style.setProperty('--body-text-color', deck.THEME.body_text_color, 'important');
+        document.querySelector(':root').style.setProperty('--body-bg-image', deck.THEME.body_bg_image, 'important');
+        document.querySelector(':root').style.setProperty('--body-bg-attachment', deck.THEME.body_bg_attachment, 'important');
 
         document.querySelector(':root').style.setProperty('--search-bar-bg-color', deck.THEME.search_bar_bg_color, 'important');
         document.querySelector(':root').style.setProperty('--search-bar-text-color', deck.THEME.search_bar_text_color, 'important');

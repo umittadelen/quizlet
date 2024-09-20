@@ -1,0 +1,64 @@
+{
+    "NAME": "theme",
+    "WORDS": [
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa"
+    ],
+    "EXPLANATIONS": [
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa",
+        "aaa"
+    ],
+    "THEME":{
+        "body_bg_color": "#ffa99e",
+        "body_text_color": "#eb5234",
+        "body_bg_image": "url('https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?t=st=1726819240~exp=1726822840~hmac=495bff19635267566163d53b799de5fbe125b86a8d56f9df9a1ce99b71be08ce&w=826')",
+        "body_bg_attachment": "fixed",
+
+        "search_bar_bg_color": "#ffa99e",
+        "search_bar_text_color": "#ff9082",
+        "search_bar_focus_border": "4px solid #eb5234",
+        "search_bar_border": "4px solid #ff9082",
+        "search_bar_hover_color": "#ff9082",
+
+        "search_element_border": "4px solid #eb5234",
+        "search_element_hover_border": "4px solid #ff9082",
+        "search_element_bg_color": "#ffa99e",
+        "search_element_hover_color": "#ff9082",
+
+        "card_scrollbar_width": "20px",
+        "card_text_color": "#eb5234",
+
+        "card_front_border_color": "#631515",
+        "card_front_border": "4px solid var(card_front_border_color)",
+        "card_front_scrollbar_thumb_color": "var(body_text_color)",
+        "card_front_bg_color": "#ffa99e",
+        "card_front_text_color": "var(card_text_color)",
+
+        "card_back_border_color": "#631515",
+        "card_back_border": "4px solid var(card_back_border_color)",
+        "card_back_scrollbar_thumb_color": "var(body_text_color)",
+        "card_back_bg_color": "#ffa99e",
+        "card_back_text_color": "var(card_text_color)"
+    },
+    "PUBLISHER": "umittadelen"
+}

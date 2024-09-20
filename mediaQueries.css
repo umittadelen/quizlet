@@ -99,6 +99,8 @@
     :root {
         --body-bg-color: #f2ffe1;
         --body-text-color: #c61c8d;
+        --body-bg-image: none;
+        --body-bg-attachment: unset;
 
         --search-bar-bg-color: #e4ffc0;
         --search-bar-text-color: #c61c8d;
@@ -133,6 +135,8 @@
     :root {
         --body-bg-color: #121212;
         --body-text-color: #ffc0cb;
+        --body-bg-image: none;
+        --body-bg-attachment: unset;
 
         --search-bar-bg-color: #2b2b2b;
         --search-bar-text-color: #ffc0cb;
